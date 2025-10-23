@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register as a new customer or partner with SolarPower Solutions and start your solar journey.">
+    <title>Customer Registration - SolarPower Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <span class="logo-icon">☀️</span>
+                <span class="logo-text">SolarPower</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="cta-button">Schedule Consultation</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Form Section -->
+    <section class="form-section section">
+        <div class="container">
+            <div class="form-header">
+                <h1>Customer Registration</h1>
+                <p>Join our solar community and stay updated with the latest solar solutions and offers</p>
+            </div>
+            <div class="form-container">
+                <form id="registrationForm" class="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regFullName">Full Name *</label>
+                            <input type="text" id="regFullName" name="fullName" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email Address *</label>
+                            <input type="email" id="regEmail" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regPhone">Contact Number *</label>
+                            <input type="tel" id="regPhone" name="phone" required placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="regContactMethod">Preferred Contact Method *</label>
+                            <select id="regContactMethod" name="contactMethod" required>
+                                <option value="">Select method</option>
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                                <option value="text">Text Message</option>
+                                <option value="any">Any Method</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regAddress">Address *</label>
+                        <input type="text" id="regAddress" name="address" required placeholder="123 Main Street, City, State ZIP">
+                    </div>
+                    <div class="form-group">
+                        <label for="regInterests">Areas of Interest (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="residential">
+                                <span>Residential Solar Installation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="commercial">
+                                <span>Commercial Solar Solutions</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="maintenance">
+                                <span>Maintenance Services</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="consultation">
+                                <span>Free Consultation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="newsletter">
+                                <span>Newsletter & Updates</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="regConsent" name="consent" required>
+                        <label for="regConsent">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Register Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">✓</div>
+            <h2>Registration Successful!</h2>
+            <p>Thank you for registering with SolarPower Solutions. We've sent a confirmation email to your registered address.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Continue</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <span class="logo-icon">☀️</span>
+                            <span class="logo-text">SolarPower</span>
+                        </div>
+                        <p>Leading the solar energy revolution with innovative solutions and unparalleled service.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="LinkedIn">💼</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="index.html#services">Residential Solar</a></li>
+                            <li><a href="index.html#services">Commercial Solar</a></li>
+                            <li><a href="index.html#services">Maintenance</a></li>
+                            <li><a href="inquiry.html">Get a Quote</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>📍 123 Solar Street, Green City, CA 94016</li>
+                            <li>📞 (555) 123-4567</li>
+                            <li>✉️ info@solarpower.com</li>
+                            <li>🕒 Mon-Fri: 8AM-6PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 SolarPower Solutions. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
