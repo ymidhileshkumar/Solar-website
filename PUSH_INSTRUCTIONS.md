@@ -64,5 +64,3 @@ git push -u origin main
 Your repository URL: https://github.com/ymidhileshkumar/Solar-website.git
 
 
-
-
