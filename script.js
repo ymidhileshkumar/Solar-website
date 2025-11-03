@@ -110,29 +110,29 @@ if (registrationForm) {
     });
 }
 
-// Contact Form Handler
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+// // Contact Form Handler
+// const contactForm = document.getElementById('contactForm');
+// if (contactForm) {
+//     contactForm.addEventListener('submit', (e) => {
+//         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
+//         // Get form data
+//         const formData = new FormData(contactForm);
+//         const data = Object.fromEntries(formData);
         
-        // Log form data (in production, send to server)
-        console.log('Contact Form Data:', data);
+//         // Log form data (in production, send to server)
+//         console.log('Contact Form Data:', data);
         
-        // Show success modal
-        const modal = document.getElementById('successModal');
-        if (modal) {
-            modal.style.display = 'block';
-        }
+//         // Show success modal
+//         const modal = document.getElementById('successModal');
+//         if (modal) {
+//             modal.style.display = 'block';
+//         }
         
-        // Reset form
-        contactForm.reset();
-    });
-}
+//         // Reset form
+//         contactForm.reset();
+//     });
+// }
 
 // Close Modal Function
 function closeModal() {
@@ -360,6 +360,40 @@ function preloadCriticalResources() {
     });
 }
 
+
 // Initialize preloading
 preloadCriticalResources();
 
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const formData = new FormData(contactForm);
+        
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Show success message/modal as you like:
+                alert("Thanks for your message!");
+                contactForm.reset();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                });
+            }
+        }).catch(error => {
+            alert("Oops! There was a problem submitting your form");
+        });
+    });
+}
