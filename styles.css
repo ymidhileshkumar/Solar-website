@@ -896,3 +896,98 @@ body {
     }
 }
 
+
+
+/* Continuous Solar Installation Carousel */
+
+.installation-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0 30px;
+}
+
+.installation-track {
+    display: flex;
+    width: max-content;
+    animation: solarSlide 35s linear infinite;
+}
+
+.installation-group {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    padding-right: 24px;
+}
+
+.installation-carousel .installation-card {
+    flex: 0 0 340px;
+    width: 340px;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+    transition: box-shadow 0.25s ease;
+}
+
+.installation-carousel .installation-card:hover {
+    transform: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.installation-carousel .installation-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.installation-carousel:hover .installation-track {
+    animation-play-state: paused;
+}
+
+@keyframes solarSlide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .installation-carousel .installation-card {
+        flex-basis: 290px;
+        width: 290px;
+    }
+
+    .installation-carousel .installation-card img {
+        height: 210px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .installation-group {
+        gap: 16px;
+        padding-right: 16px;
+    }
+
+    .installation-carousel .installation-card {
+        flex-basis: 80vw;
+        width: 80vw;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .installation-track {
+        animation: none;
+    }
+
+    .installation-carousel {
+        overflow-x: auto;
+    }
+}
+
