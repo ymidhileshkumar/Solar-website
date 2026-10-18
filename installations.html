@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Solar Installations | SolarPower Solutions</title>
+    <meta name="description" content="Explore completed rooftop solar panel installations by SolarPower Solutions. View our installation portfolio and contact us for your solar project.">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .installations-hero {
+            background: linear-gradient(135deg, #14532d, #2196F3);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .installations-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .installations-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .proof-section {
+            padding: 55px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .proof-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .proof-heading h2 {
+            color: #388E3C;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .proof-heading p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .installation-stats {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0 40px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 22px 40px;
+            background: #f0f8f1;
+            border-radius: 12px;
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: #388E3C;
+            margin: 0 0 5px;
+        }
+
+        .installation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .installation-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .installation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 9px 25px rgba(0, 0, 0, 0.13);
+        }
+
+        .installation-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .installation-info {
+            padding: 22px;
+        }
+
+        .installation-info h3 {
+            color: #263238;
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .installation-info p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 14px;
+        }
+
+        .completed-label {
+            display: inline-block;
+            background: #e6f5e9;
+            color: #237a35;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .installation-cta {
+            background: #f5f7fa;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .installation-cta h2 {
+            color: #263238;
+            margin-bottom: 12px;
+        }
+
+        .installation-cta p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .installation-button {
+            display: inline-block;
+            background: #388E3C;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .installation-button:hover {
+            background: #2e7132;
+        }
+
+        @media (max-width: 900px) {
+            .installation-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .installation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .installation-card img {
+                height: 230px;
+            }
+
+            .stat-card {
+                padding: 20px 30px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .installation-card {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="installations.html" aria-current="page">Our Installations</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="installations-hero">
+        <h1>Our Solar Installations</h1>
+        <p>
+            Real rooftop solar projects completed by our team.
+            Take a look at our installation work and see how we help
+            customers move towards clean, renewable energy.
+        </p>
+    </section>
+
+    <!-- Installation Portfolio -->
+    <main class="proof-section">
+        <div class="proof-heading">
+            <h2>Our Completed Projects</h2>
+            <p>Five rooftop solar installations completed for our clients.</p>
+        </div>
+
+        <div class="installation-stats">
+            <div class="stat-card">
+                <h3>5</h3>
+                <p>Completed Installations</p>
+            </div>
+        </div>
+
+        <div class="installation-grid">
+
+            <!-- Client Installation 1 -->
+            <article class="installation-card">
+                <img src="images/installation-1.jpg"
+                     alt="Rooftop solar panel installation, project 1"
+                     loading="lazy">
+                <div class="installation-info">
+                    <h3>Installation 01</h3>
+                    <p>Residential rooftop solar panel installation.</p>
+                    <span class="completed-label">✓ Installation Completed</span>
+                </div>
+            </article>
+
+            <!-- Client Installation 2 -->
+            <article class="installation-card">
+                <img src="images/installation-2.jpg"
+                     alt="Rooftop solar panel installation, project 2"
+                     loading="lazy">
+                <div class="installation-info">
+                    <h3>Installation 02</h3>
+                    <p>Solar panels installed on a residential rooftop.</p>
+                    <span class="completed-label">✓ Installation Completed</span>
+                </div>
+            </article>
+
+            <!-- Client Installation 3 -->
+            <article class="installation-card">
+                <img src="images/installation-3.jpg"
+                     alt="Rooftop solar panel installation, project 3"
+                     loading="lazy">
+                <div class="installation-info">
+                    <h3>Installation 03</h3>
+                    <p>Completed rooftop solar installation project.</p>
+                    <span class="completed-label">✓ Installation Completed</span>
+                </div>
+            </article>
+
+            <!-- Client Installation 4 -->
+            <article class="installation-card">
+                <img src="images/installation-4.jpg"
+                     alt="Rooftop solar panel installation, project 4"
+                     loading="lazy">
+                <div class="installation-info">
+                    <h3>Installation 04</h3>
+                    <p>Residential solar installation by our team.</p>
+                    <span class="completed-label">✓ Installation Completed</span>
+                </div>
+            </article>
+
+            <!-- Client Installation 5 -->
+            <article class="installation-card">
+                <img src="images/installation-5.jpg"
+                     alt="Rooftop solar panel installation, project 5"
+                     loading="lazy">
+                <div class="installation-info">
+                    <h3>Installation 05</h3>
+                    <p>Another completed rooftop solar project.</p>
+                    <span class="completed-label">✓ Installation Completed</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="installation-cta">
+        <h2>Planning to Install Solar Panels?</h2>
+        <p>Contact our team to discuss your rooftop solar requirements.</p>
+        <a href="contact.html" class="installation-button">
+            Contact Us
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SolarPower Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
